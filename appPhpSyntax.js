@@ -30,7 +30,7 @@ function readDir (dirpath) {
           }
           if( stats && stats.isFile() ){
             var type = file.split('.')[1];
-            if ( ext.indexOf(type) >=0 ) {
+            if ( ext.indexOf(type) >=0 && file.split('.').length == 1 ) {
               readfile(dirpath+file);
             };
           };
