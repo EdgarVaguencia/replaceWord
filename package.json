@@ -1,6 +1,6 @@
 {
   "name": "phpsyntax",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Validación que todo los archivos del proyecto en PHP contengan la sintaxis correcta",
   "main": "appPhpSyntax.js",
   "keywords": [
