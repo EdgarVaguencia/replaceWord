@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var fs = require('fs'),
     path = require('path');
 
@@ -19,13 +21,14 @@ readDir(dir+path.sep);
 
 //Lectura del directorio
 function readDir (dirpath) {
-  fs.readdir( dirpath, function(err, files){
+  fs.readdir(dirpath, function(err, files){
     if ( files.length > 0 ) {
       files.forEach(function(file){
         fs.stat(dirpath+file,function(err,stats){
           if ( stats && stats.isDirectory() ) {
             readDir(dirpath+file+path.sep);
-          }else if( stats && stats.isFile() ){
+          }
+          if( stats && stats.isFile() ){
             var type = file.split('.')[1];
             if ( ext.indexOf(type) >=0 ) {
               readfile(dirpath+file);
@@ -39,8 +42,8 @@ function readDir (dirpath) {
 
 //Lectura del archivo permitido
 function readfile (filepath) {
-  var data = fs.readFileSync( filepath, {encoding: 'utf-8'}),
-      lines = data.split('\n'),
+  var data = fs.readFileSync(filepath, {encoding: 'utf-8'});
+  var lines = data.split('\n'),
       flag = false;
   for (var i = lines.length - 1; i >= 0; i--) {
       var re = lines[i].match(regexp);
