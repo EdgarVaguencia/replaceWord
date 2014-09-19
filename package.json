@@ -1,0 +1,14 @@
+{
+  "name": "PhpSyntax",
+  "version": "1.0.0",
+  "description": "Validación que todo los archivos del proyecto en PHP contengan la sintaxis correcta",
+  "main": "appPhpSyntax.js",
+  "scripts": {
+    "start": "node appPhpSyntax.js"
+  },
+  "keywords": [
+    "PHP"
+  ],
+  "author": "Edgar Valencia <isc.edgarvalencia@gmail.com>",
+  "license": "MIT"
+}
