@@ -3,6 +3,8 @@ replaceWord
 
 [![Code Climate](https://codeclimate.com/github/EdgarVaguencia/replaceWord/badges/gpa.svg)](https://codeclimate.com/github/EdgarVaguencia/replaceWord)
 
+[![Build Status](https://travis-ci.org/EdgarVaguencia/replaceWord.svg)](https://travis-ci.org/EdgarVaguencia/replaceWord)
+
 Valida la correcta sintaxis de inicio de bloque de PHP (&lt;? to &lt;?php) para archivos HTML, PHP, JS, Python
 
 # Install
