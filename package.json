@@ -15,7 +15,7 @@
   "repository": {
     "type" : "git",
     "url" : "https://github.com/EdgarVaguencia/replaceWord.git"
-  }
+  },
   "author": "Edgar Valencia <isc.edgarvalencia@gmail.com>",
   "license": "MIT"
 }
