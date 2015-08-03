@@ -1,0 +1,3 @@
+<?
+  echo "Esto es PHP";
+?>

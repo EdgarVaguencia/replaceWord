@@ -1,20 +1,20 @@
 #!/usr/bin/env node
 
-var fs = require('fs'),
-    path = require('path');
+var fs = require('fs');
+var path = require('path');
 
 // Lectura de parametros pasados e inicializamos variables requeridas
-var options = process.argv.slice(2),
-    dir,
-    ext = ['html','js','py','php'],
-    regexp = /(<\?)(\W|$)/g;
+var options = process.argv.slice(2);
+var dir;
+var ext = ['html','js','py','php'];
+var regexp = /(<\?)(\W|$)/g;
 
 //Asignamos la ruta del directoria según los parametros o se asigna la actual
 if ( options.length >= 1 ) {
   dir = options[0];
 }else{
   dir = '.';
-};
+}
 
 //Llamada inical a la lectura del directorio
 readDir(dir+path.sep);
@@ -29,14 +29,14 @@ function readDir (dirpath) {
             readDir(dirpath+file+path.sep);
           }
           if( stats && stats.isFile() ){
-            var type = file.split('.')[1];
-            if ( ext.indexOf(type) >=0 && file.split('.').length == 1 ) {
+            var type_ = file.split('.');
+            if (ext.indexOf(type_[type_.length - 1]) >= 0) {
               readfile(dirpath+file);
-            };
-          };
+            }
+          }
         });
       });
-    };
+    }
   });
 }
 
@@ -50,13 +50,13 @@ function readfile (filepath) {
       if ( re ) {
         lines[i] = lines[i].replace(regexp,re[0].trim()+"php ","gi");
         flag = true;
-      };
-  };
+      }
+  }
   if (flag) {
     data = lines.join('\n');
     fs.writeFile(filepath,data,function(err){
       if (err) throw err;
       console.log(filepath+" Saved!");
-    })
-  };
+    });
+  }
 }

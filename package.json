@@ -1,6 +1,6 @@
 {
   "name": "phpsyntax",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Validación que todo los archivos del proyecto en PHP contengan la sintaxis correcta",
   "main": "appPhpSyntax.js",
   "keywords": [
@@ -9,6 +9,13 @@
   "bin":{
     "phpsyntax" : "./appPhpSyntax.js"
   },
+  "scripts": {
+    "test": "node appPhpSyntax.js example/"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/EdgarVaguencia/replaceWord.git"
+  }
   "author": "Edgar Valencia <isc.edgarvalencia@gmail.com>",
   "license": "MIT"
 }
