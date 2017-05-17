@@ -9,6 +9,8 @@ Valida la correcta sintaxis de inicio de bloque de PHP (&lt;? to &lt;?php) para 
 
 # Install
 
+[![NPM](https://nodei.co/npm/phpsyntax.png?downloads=true&downloadRank=true)](https://nodei.co/npm/phpsyntax/)
+
 npm install -g phpsyntax
 
 #How to use
